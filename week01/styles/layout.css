@@ -1,0 +1,63 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grid general del body */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+/* Nav con Flex */
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Main con dos columnas */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: white;
+}
+
+/* Main content */
+.main-content {
+  background-color: #ccc;
+  padding: 1.5rem;
+}
+
+/* Aside content */
+.aside-content {
+  background-color: white;
+  padding: 1.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
