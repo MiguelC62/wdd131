@@ -5,6 +5,7 @@
   --navy: #0b2545;
   --white: #ffffff;
   --bg: #f2f8fd;
+  --white-glass: #ffffffe0;   /* blanco al 88 % */
 }
 * { box-sizing: border-box; }
 body {
@@ -63,7 +64,7 @@ footer p { margin: .2rem 0; }
   .hero img { border-radius: 0; min-height: 450px; object-fit: cover; }
 
   .data, .weather {
-    background: rgba(255, 255, 255, .88);
+    background: var(--white-glass);
     border: none;
     border-radius: 0;
     padding: 0 0 1rem;
