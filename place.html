@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Argentina | WDD 131</title>
+    <meta
+      name="description"
+      content="A page about Argentina: country data and current weather in Buenos Aires."
+    />
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="icon" href="data:," />
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Argentina</h1>
+    </header>
+
+    <main>
+      <section class="hero">
+        <picture>
+          <source
+            media="(min-width: 700px)"
+            srcset="images/argentina-large.webp"
+          />
+          <img
+            src="images/argentina-small.webp"
+            alt="Perito Moreno Glacier in Patagonia, Argentina"
+            width="800"
+            height="600"
+          />
+        </picture>
+      </section>
+
+      <section class="data">
+        <h2>Data</h2>
+        <dl>
+          <dt>Area:</dt>
+          <dd>2,780,400 sq km</dd>
+          <dt>Population:</dt>
+          <dd>46,044,703</dd>
+          <dt>Capital:</dt>
+          <dd>Buenos Aires</dd>
+          <dt>Languages:</dt>
+          <dd>Spanish</dd>
+          <dt>Currency:</dt>
+          <dd>Argentine Peso (ARS)</dd>
+          <dt>Time Zone:</dt>
+          <dd>UTC-3</dd>
+          <dt>Calling Code:</dt>
+          <dd>+54</dd>
+          <dt>Internet TLD:</dt>
+          <dd>.ar</dd>
+        </dl>
+      </section>
+
+      <section class="weather">
+        <h2>Weather</h2>
+        <img
+          src="images/weather-icon.svg"
+          alt="Partly cloudy weather icon"
+          width="60"
+          height="60"
+          class="weather-icon"
+        />
+        <dl>
+          <dt>Temperature:</dt>
+          <dd><span id="temp">22</span> &deg;C</dd>
+          <dt>Conditions:</dt>
+          <dd>Partly Cloudy</dd>
+          <dt>Wind:</dt>
+          <dd><span id="wind">14</span> km/h</dd>
+          <dt>Wind Chill:</dt>
+          <dd id="windchill">N/A</dd>
+        </dl>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Miguel Condori, Utah, USA</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
