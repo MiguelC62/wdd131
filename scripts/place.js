@@ -2,7 +2,7 @@
 const temperature = 9; // °C
 const windSpeed = 10; // km/h
 
-// Fórmula métrica (°C y km/h), en una sola línea
+// Metric formula (°C and km/h), on a single line
 function calculateWindChill(temp, speed) {
   return (
     13.12 +
@@ -12,7 +12,7 @@ function calculateWindChill(temp, speed) {
   );
 }
 
-// Solo calcula si las condiciones son viables: temp <= 10 °C y viento > 4.8 km/h
+// Only calculates if the conditions are viable: temp <= 10 °C and wind > 4.8 km/h
 function getWindChill(temp, speed) {
   if (temp <= 10 && speed > 4.8) {
     return `${calculateWindChill(temp, speed).toFixed(1)} °C`;
@@ -20,13 +20,13 @@ function getWindChill(temp, speed) {
   return 'N/A';
 }
 
-// Mostrar el wind chill al cargar la página
+// Show the wind chill when the page loads
 document.getElementById('windchill').textContent = getWindChill(
   temperature,
   windSpeed,
 );
 
-// Footer: año actual y última modificación
+// Footer: real year and last modification
 document.getElementById('currentyear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent =
   `Last Modification: ${document.lastModified}`;

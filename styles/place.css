@@ -1,11 +1,11 @@
 :root {
-  --sky: #74acdf;        /* celeste de la bandera */
-  --sky-dark: #154a73;   /* barras y texto con buen contraste */
-  --sun: #f6b40e;        /* Sol de Mayo */
+  --sky: #74acdf;        /* blue sky of the Argentina flag */
+  --sky-dark: #154a73;   /* bars and text with good contrast */
+  --sun: #f6b40e;        /* Sun of May */
   --navy: #0b2545;
   --white: #ffffff;
   --bg: #f2f8fd;
-  --white-glass: #ffffffe0;   /* blanco al 88 % */
+  --white-glass: #ffffffe0;   /* white at 88% opacity */
 }
 * { box-sizing: border-box; }
 body {
@@ -57,7 +57,7 @@ footer {
 }
 footer p { margin: .2rem 0; }
 
-/* Vista ancha: imagen a todo el ancho con Data (izq.) y Weather (der.) encima */
+/* Wide View: image at full width with Data (left) and Weather (right) on top */
 @media (min-width: 700px) {
   main { max-width: none; padding: 0; display: grid; }
   .hero, .data, .weather { grid-area: 1 / 1; margin: 0; }
@@ -73,7 +73,7 @@ footer p { margin: .2rem 0; }
   .data    { align-self: start; justify-self: start; margin: 2rem 0 0 1.5rem; width: 300px; }
   .weather { align-self: end;   justify-self: end;   margin: 0 1.5rem 2rem 0; width: 270px; }
 
-  /* Título en barra de color */
+  /* Title in color bar */
   .data h2, .weather h2 {
     background: var(--sky-dark);
     color: var(--white);
@@ -83,7 +83,7 @@ footer p { margin: .2rem 0; }
   }
   .data dl, .weather dl { justify-content: start; padding: 0 1rem; }
 
-  /* El SVG se oculta y el icono va como pseudo-elemento después del título */
+  /* The SVG is hidden and the icon is placed as a pseudo-element after the title */
   .weather-icon { display: none; }
   .weather h2::after {
     content: "⛅";
