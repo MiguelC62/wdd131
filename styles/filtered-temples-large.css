@@ -10,6 +10,10 @@
     padding: 0 1rem;
   }
 
+  header {
+    grid-template-columns: auto 1fr;
+  }
+
   header .site-title {
     font-size: 1.5rem;
   }
@@ -20,9 +24,10 @@
   }
 
   nav {
-    grid-column: auto;
+    grid-column: 2;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     gap: 2rem;
   }
 
@@ -37,7 +42,4 @@
     gap: 2rem 1rem;
   }
 
-  figure img {
-    max-width: 300px;
-  }
 }

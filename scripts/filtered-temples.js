@@ -138,7 +138,7 @@ function createTempleCard(templeList = temples) {
     name.textContent = temple.templeName;
     location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
     dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Area:</span> ${temple.area.toLocaleString()} sq ft`;
+    area.innerHTML = `<span class="label">Area:</span> ${temple.area.toLocaleString("en-US")} sq ft`;
 
     img.setAttribute('src', temple.imageUrl);
     img.setAttribute('alt', `${temple.templeName} Temple`);
