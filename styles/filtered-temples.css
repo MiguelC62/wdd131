@@ -7,7 +7,6 @@
   --text: #1f2937; /* dark gray */
   --white: #ffffff;
   --link: #3f0d6b;
-  --border: #d7dee8;
 }
 
 * {
@@ -95,6 +94,11 @@ main h1 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  align-content: start;
+}
+
+.gallery.reserve {
+  min-height: 100vh;
 }
 
 .gallery section {
@@ -105,7 +109,7 @@ main h1 {
   border-bottom: 1px solid var(--border);
 }
 
-.gallery h3 {
+.gallery h2 {
   color: var(--primary);
   font-size: 1.2rem;
   margin-bottom: 0.4rem;

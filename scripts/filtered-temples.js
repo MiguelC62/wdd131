@@ -103,6 +103,11 @@ const temples = [
 
 createTempleCard();
 
+// Quita la altura reservada cuando la página termina de cargar
+window.addEventListener('load', () => {
+  document.querySelector('.gallery').classList.remove('reserve');
+});
+
 document.querySelector('#home').addEventListener('click', () => {
   createTempleCard();
 });
@@ -129,7 +134,7 @@ function createTempleCard(templeList = temples) {
 
   templeList.forEach((temple) => {
     let card = document.createElement('section');
-    let name = document.createElement('h3');
+    let name = document.createElement('h2');
     let location = document.createElement('p');
     let dedication = document.createElement('p');
     let area = document.createElement('p');
