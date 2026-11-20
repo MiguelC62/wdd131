@@ -104,7 +104,7 @@ const temples = [
 const heading = document.querySelector('main h1');
 const navLinks = document.querySelectorAll('#navigation a');
 
-// Marca el enlace activo, cambia el título y cierra el menú en el móvil
+// Mark the active link, change the title, and close the mobile menu
 function setFilter(link, title) {
   navLinks.forEach((a) => a.classList.remove('active'));
   link.classList.add('active');
