@@ -1,0 +1,79 @@
+:root {
+    --primary-color: #1e3a5f;
+    --accent-color: #0056b3;
+    --background-color: #f4f6f8;
+    --text-color: #222;
+    --border-color: #d0d7de;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: .3rem;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: .75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: .8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #357abd;
+}
