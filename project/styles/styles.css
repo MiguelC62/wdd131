@@ -1,0 +1,255 @@
+/* Arte Claudia: shared styles for every page (mobile first) */
+
+:root {
+  --gallery-white: #FAF7F2;
+  --charcoal: #2B2A28;
+  --terracotta: #823D22;
+  --gold: #D8B566;
+  --border: #D9D2C7;
+  --heading-font: "Cormorant Garamond", Georgia, serif;
+  --body-font: "Lato", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--gallery-white);
+  color: var(--charcoal);
+  font-family: var(--body-font);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.brand {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1,
+h2 {
+  color: var(--terracotta);
+}
+
+h2 {
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  border-bottom: 3px solid var(--gold);
+  font-size: 2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--terracotta);
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Header and navigation */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--charcoal);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--gallery-white);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.menu-button {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  background: none;
+  color: var(--gallery-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.main-nav {
+  display: none;
+  width: 100%;
+}
+
+.main-nav.open {
+  display: block;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.6rem 0.25rem;
+  color: var(--gallery-white);
+  text-decoration: none;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--gold);
+}
+
+/* Main content */
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+.hero {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--terracotta);
+  color: #FFFFFF;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--charcoal);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.card-body {
+  padding: 0 1rem 1rem;
+}
+
+.card h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+.price {
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
+/* New work alerts form */
+.notify {
+  margin-top: 2rem;
+  padding: 0 1.5rem 1.5rem;
+  border-radius: 8px;
+  background-color: #EFE9E0;
+}
+
+.notify label {
+  display: block;
+  font-weight: 700;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.form-row input {
+  flex: 1 1 14rem;
+  padding: 0.6rem;
+  border: 1px solid var(--charcoal);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  padding: 1rem;
+  background-color: var(--charcoal);
+  color: var(--gallery-white);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.site-footer a {
+  color: var(--gold);
+}
+
+/* Wider screens */
+@media (min-width: 40em) {
+  .menu-button {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    width: auto;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 56em) {
+  .hero {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}

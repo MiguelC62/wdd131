@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arte Claudia | Original Paintings Inspired by the Andes</title>
+  <meta name="description" content="Arte Claudia is an online gallery of original paintings by Claudia, inspired by the landscapes, nature and culture of the Andes.">
+  <meta name="author" content="Miguel Angel Condori">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/home.js" type="module"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="56" height="56">
+      <span>Arte Claudia</span>
+    </a>
+    <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">&#9776;</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Claudia</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 40em)" srcset="images/hero-large.webp">
+        <img src="images/hero-small.webp" alt="Andean Sunset, a painting of dark mountains under an orange sky" width="640" height="400" fetchpriority="high">
+      </picture>
+      <div class="hero-text">
+        <h1>Original paintings inspired by the Andes</h1>
+        <p>Welcome to the online gallery of Claudia, a painter who captures the mountains, light and culture of the Andes. Every work is a unique, hand-painted original, signed by the artist and delivered with a certificate of authenticity.</p>
+        <a class="button" href="gallery.html">View Gallery</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Artwork</h2>
+      <div id="featured-artworks" class="card-grid"></div>
+    </section>
+
+    <section class="notify">
+      <h2>Get Notified of New Work</h2>
+      <p>Leave your email and Claudia will write only when there are new paintings or an auction. No regular newsletters and no spam.</p>
+      <form id="notify-form">
+        <label for="email">Email address</label>
+        <div class="form-row">
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <button class="button" type="submit">Notify Me</button>
+        </div>
+      </form>
+      <p id="notify-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="copyright-year">2026</span> Arte Claudia · Miguel Angel Condori · WDD 131</p>
+    <p><a href="siteplan.html">Site Plan</a></p>
+    <p id="last-modified"></p>
+  </footer>
+</body>
+</html>
