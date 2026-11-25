@@ -127,3 +127,17 @@ input[type="submit"]:hover {
     outline: 3px solid var(--accent-color);
     outline-offset: 2px;
 }
+
+@media screen and (min-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    .rating-options {
+        gap: 0.5rem 1.5rem;
+    }
+}

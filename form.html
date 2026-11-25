@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Form | BYU-Idaho WDD 131 project</title>
-    <meta name="author" content="Miguel Condori" />
+    <meta name="author" content="Miguel Condori" >
     <meta
       name="description"
       content="Product review form for WDD 131 project. It includes a submission confirmation with a counter."
-    />
+    >
     <link rel="stylesheet" href="styles/form.css" />
     <link rel="icon" href="data:," />
-    <script src="scripts/form.js" defer></script>
     <script src="scripts/footer.js" defer></script>
+    <script src="scripts/form.js" defer></script>
   </head>
   <body>
     <header>
@@ -31,22 +31,11 @@
         <fieldset>
           <legend>Overall Rating</legend>
           <div class="rating-options">
-            <label
-              ><input type="radio" name="rating" value="1" required /> 1
-              Star</label
-            >
-            <label
-              ><input type="radio" name="rating" value="2" /> 2 Stars</label
-            >
-            <label
-              ><input type="radio" name="rating" value="3" /> 3 Stars</label
-            >
-            <label
-              ><input type="radio" name="rating" value="4" /> 4 Stars</label
-            >
-            <label
-              ><input type="radio" name="rating" value="5" /> 5 Stars</label
-            >
+            <label for="star1"><input type="radio" id="star1" name="rating" value="1" required /> 1 Star</label>
+            <label for="star2"><input type="radio" id="star2" name="rating" value="2" required /> 2 Stars</label>
+            <label for="star3"><input type="radio" id="star3" name="rating" value="3" required /> 3 Stars</label>
+            <label for="star4"><input type="radio" id="star4" name="rating" value="4" required /> 4 Stars</label>
+            <label for="star5"><input type="radio" id="star5" name="rating" value="5" required /> 5 Stars</label>
           </div>
         </fieldset>
 
@@ -82,5 +71,9 @@
         <input type="submit" value="Post Review" />
       </form>
     </main>
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Miguel Condori, Utah, USA</p>
+      <p id="lastModified"></p>
+    </footer>
   </body>
 </html>
