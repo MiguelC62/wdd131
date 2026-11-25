@@ -23,13 +23,5 @@ if (productSelect) {
 const installDate = document.querySelector('#installDate');
 
 if (installDate) {
-  installDate.max = new Date().toLocaleDateString('en-CA'); // formato YYYY-MM-DD
-}
-
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
-}
-
-if (lastModified) {
-  lastModified.textContent = `Last Modification: ${document.lastModified}`;
+  installDate.max = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD
 }
