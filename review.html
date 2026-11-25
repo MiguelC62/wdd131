@@ -1,21 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Submitted</title>
+    <title>Review Submitted | BYU-Idaho WDD 131 project</title>
+    <meta name="author" content="Miguel Condori">
+    <meta
+      name="description"
+      content="Confirmation page for the WDD 131 product review form, showing how many reviews have been completed."
+    >
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="icon" href="data:,">
     <script src="scripts/review.js" defer></script>
-</head>
-<body>
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Thank You!</h1>
+    </header>
     <main>
-        <h1>Thank You!</h1>
-
-        <p>Your review has been submitted.</p>
-
-        <p>
-            Number of reviews completed:
-            <span id="reviewCount">0</span>
-        </p>
+      <p>Your review has been submitted.</p>
+      <p>
+        Number of reviews completed:
+        <strong id="reviewCount">0</strong>
+      </p>
+      <p><a href="form.html">Submit another review</a></p>
     </main>
-</body>
+  </body>
 </html>

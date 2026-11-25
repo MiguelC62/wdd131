@@ -1,7 +1,20 @@
-let reviewCount = Number(localStorage.getItem('reviewCount')) || 0;
+const countElement = document.querySelector('#reviewCount');
 
-reviewCount++;
+try {
+  let reviewCount = Number(localStorage.getItem('reviewCount')) || 0;
 
-localStorage.setItem('reviewCount', reviewCount);
+  // Contar solo si la página llega desde el formulario (GET con parámetros)
+  if (window.location.search) {
+    reviewCount++;
+    localStorage.setItem('reviewCount', reviewCount);
 
-document.querySelector('#reviewCount').textContent = reviewCount;
+    // Quitar los parámetros para que un refresh no vuelva a contar
+    history.replaceState(null, '', window.location.pathname);
+  }
+
+  if (countElement) {
+    countElement.textContent = reviewCount;
+  }
+} catch (error) {
+  console.error('Review counter unavailable:', error);
+}
