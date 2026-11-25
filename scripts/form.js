@@ -36,3 +36,4 @@ products.forEach((product) => {
 
   productSelect.appendChild(option);
 });
+
