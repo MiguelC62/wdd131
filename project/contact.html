@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arte Claudia | Contact the Artist</title>
+  <meta name="description" content="Contact Claudia to ask about an original painting, request a custom commission for your home or business, or send a question.">
+  <meta name="author" content="Miguel Angel Condori">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/contact.js" type="module"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="56" height="56">
+      <span>Arte Claudia</span>
+    </a>
+    <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">&#9776;</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Claudia</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Contact</h1>
+      <p>Ask about a painting, request a custom commission or send a question. Claudia answers every message personally.</p>
+    </section>
+
+    <div class="contact-layout">
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Send a Message</h2>
+        <form id="contact-form" class="contact-form" action="thankyou.html" method="get">
+          <fieldset>
+            <legend>I would like to</legend>
+            <label class="choice"><input type="radio" name="reason" value="artwork" checked> Ask about a painting</label>
+            <label class="choice"><input type="radio" name="reason" value="commission"> Request a commission</label>
+            <label class="choice"><input type="radio" name="reason" value="other"> Ask something else</label>
+          </fieldset>
+
+          <div id="artwork-field">
+            <label for="artwork">Painting</label>
+            <select id="artwork" name="artwork">
+              <option value="">Choose a painting</option>
+            </select>
+          </div>
+
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+
+          <label for="contact-email">Email address</label>
+          <input type="email" id="contact-email" name="email" autocomplete="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="For a commission, tell Claudia the size, theme and place where the painting will hang."></textarea>
+
+          <button class="button" type="submit">Send Message</button>
+        </form>
+      </section>
+
+      <aside class="contact-info" aria-labelledby="info-heading">
+        <h2 id="info-heading">Tips for Your Message</h2>
+        <ul>
+          <li><strong>About a painting:</strong> choose it from the list, and Claudia will confirm its availability, shipping and payment details.</li>
+          <li><strong>For a commission:</strong> include the size, the theme and the place where the painting will hang.</li>
+          <li><strong>Not sure yet?</strong> Browse the <a href="gallery.html">gallery</a> to find a style you like.</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="copyright-year">2026</span> Arte Claudia · Miguel Angel Condori · WDD 131</p>
+    <p><a href="siteplan.html">Site Plan</a></p>
+    <p id="last-modified"></p>
+  </footer>
+</body>
+</html>

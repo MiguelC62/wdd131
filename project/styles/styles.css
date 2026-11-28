@@ -10,6 +10,10 @@
   --body-font: "Lato", Arial, sans-serif;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -164,21 +168,41 @@ main {
   background-color: #FFFFFF;
 }
 
+/* Paintings have mixed orientations: show each one whole inside a square frame */
+.card img {
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0.75rem;
+  background-color: #EFE9E0;
+  object-fit: contain;
+}
+
+/* The results message is filled by JavaScript: keep room for one line */
+#results-message {
+  min-height: 1.6em;
+}
+
+/* The cards are added by JavaScript: reserve space so the content below does not jump */
+.card-grid:empty {
+  min-height: 100vh;
+}
+
 .card-body {
-  padding: 0 1rem 1rem;
+  padding: 0.75rem 1rem 1rem;
 }
 
-.card h3 {
-  margin: 0.75rem 0 0.25rem;
-  font-size: 1.5rem;
-}
-
+.card h3,
 .card p {
   margin: 0;
 }
 
 .price {
   color: var(--terracotta);
+  font-weight: 700;
+}
+
+.sold {
+  font-style: italic;
   font-weight: 700;
 }
 
@@ -207,6 +231,173 @@ main {
   border: 1px solid var(--charcoal);
   border-radius: 4px;
   font-size: 1rem;
+}
+
+/* Gallery page */
+.page-intro h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.6rem;
+}
+
+.page-intro p {
+  max-width: 45rem;
+  margin-top: 0;
+}
+
+.gallery-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-button {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--terracotta);
+  border-radius: 999px;
+  background-color: #FFFFFF;
+  color: var(--terracotta);
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button[aria-pressed="true"] {
+  background-color: var(--terracotta);
+  color: #FFFFFF;
+}
+
+.sort label {
+  margin-right: 0.5rem;
+  font-weight: 700;
+}
+
+.sort select {
+  padding: 0.4rem;
+  border: 1px solid var(--charcoal);
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
+
+.notify .button {
+  margin-top: 0.5rem;
+}
+
+/* About page */
+.about {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-image {
+  margin: 0;
+}
+
+.about-image img {
+  border-radius: 8px;
+}
+
+.about-image figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.info-grid li {
+  padding: 0 1rem 1rem;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--gold);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.faq details {
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.faq summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq details p {
+  margin-bottom: 0;
+}
+
+/* Contact page */
+.contact-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.4rem;
+  max-width: 36rem;
+}
+
+.contact-form fieldset {
+  margin: 0 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.contact-form legend,
+.contact-form > label,
+#artwork-field label {
+  font-weight: 700;
+}
+
+.contact-form .choice {
+  display: block;
+  padding: 0.2rem 0;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.6rem;
+  border: 1px solid var(--charcoal);
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
+
+.contact-form .button {
+  justify-self: start;
+}
+
+.contact-info {
+  align-self: start;
+  padding: 0 1.5rem 1.5rem;
+  border-radius: 8px;
+  background-color: #EFE9E0;
 }
 
 /* Footer */
@@ -251,5 +442,15 @@ main {
 
   .hero h1 {
     font-size: 3rem;
+  }
+
+  .about {
+    grid-template-columns: 2fr 3fr;
+    align-items: start;
+    margin-top: 1rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 3fr 2fr;
   }
 }

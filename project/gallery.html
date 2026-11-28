@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arte Claudia | Gallery of Original Paintings</title>
+  <meta name="description" content="Browse the original paintings by Claudia by category: Andean landscapes, still lifes and abstract works, with size, technique and price.">
+  <meta name="author" content="Miguel Angel Condori">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/gallery.js" type="module"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.svg" alt="" width="56" height="56">
+      <span>Arte Claudia</span>
+    </a>
+    <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">&#9776;</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="about.html">About Claudia</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Gallery</h1>
+      <p>Every painting is a hand-painted original, signed by Claudia and delivered with a certificate of authenticity. Choose a category to find the right work for your home, office or business.</p>
+    </section>
+
+    <section aria-labelledby="artworks-heading">
+      <h2 id="artworks-heading">Artworks</h2>
+      <div class="gallery-controls">
+        <div class="filters" role="group" aria-label="Filter by category">
+          <button class="filter-button" type="button" data-category="All" aria-pressed="true">All</button>
+          <button class="filter-button" type="button" data-category="Landscapes" aria-pressed="false">Landscapes</button>
+          <button class="filter-button" type="button" data-category="Still Life" aria-pressed="false">Still Life</button>
+          <button class="filter-button" type="button" data-category="Abstract" aria-pressed="false">Abstract</button>
+        </div>
+        <div class="sort">
+          <label for="sort">Sort by</label>
+          <select id="sort" name="sort">
+            <option value="newest">Newest first</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+          </select>
+        </div>
+      </div>
+      <p id="results-message" aria-live="polite"></p>
+      <div id="gallery-artworks" class="card-grid"></div>
+    </section>
+
+    <section class="notify">
+      <h2>Looking for Something Special?</h2>
+      <p>Claudia also paints custom works for homes, hotels and restaurants. Ask about a painting or request a commission on the contact page.</p>
+      <a class="button" href="contact.html">Contact Claudia</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="copyright-year">2026</span> Arte Claudia · Miguel Angel Condori · WDD 131</p>
+    <p><a href="siteplan.html">Site Plan</a></p>
+    <p id="last-modified"></p>
+  </footer>
+</body>
+</html>
